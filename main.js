@@ -1,47 +1,108 @@
-// var countries = [
-//     "Benin", "Burkina Faso", "Cape Verde",
-//     "Gambia", "Ghana", "Guinea", "Guinea-Bissau",
-//     "Ivory Coast", "Liberia", "Mauritania", "Mali",
-//     "Niger", "Nigeria", "Senegal", "Sierra Leone", "Togo"
-//     // You can add more countries if you want
-// ];
+// window.addEventListener('DOMContentLoaded', function () {
+//     var container = document.querySelectorAll('.gallery-container');
+//     var images = document.querySelector('.gallery-images');
+//     var imageWidth = document.querySelector('.gallery-image').offsetWidth;
 
-// // Get the input element
-// var input = document.getElementById('countryInput');
+//     var currentImage = 0;
+//     var totalImages = document.querySelectorAll('.gallery-image').length;
 
-// // Add the event listener for input changes
-// input.addEventListener("input", function() {
-
-//     // Get the value entered in the input
-//     var inputValue = input.value;
-
-//     // Filter the country array based on the input value
-//     var filteredCountries = countries.filter(function(country){
-//         return country.toLowerCase().startsWith(inputValue.toLowerCase());
-//     });
-
-//     // Display the first matching country name
-//     if(filteredCountries.length > 0){
-//         var countryName = filteredCountries[0];
-//         console.log(countryName); // Replace this line with your desired code to replace the country name
+//     function scrollImages() {
+//         currentImage++;
+//         if (currentImage === totalImages) {
+//             currentImage = 0;
+//         }
+//         images.style.transform = 'translateX(-' + (currentImage * imageWidth) + 'px)';
 //     }
+
+//     setInterval(scrollImages, 3000);
 // });
 
-// Array of country names
-/*const countryNames = ["Argentina", "Brazil", "Canada", "Denmark", "Egypt", "France", "Germany", "Hungary", "Italy", "Japan", "Kenya", "Mexico", "Netherlands", "Oman", "Poland", "Qatar", "Russia", "Spain", "Thailand", "United States", "Vietnam", "Yemen", "Zimbabwe"];
+// window.addEventListener('DOMContentLoaded', function () {
+//     var container = document.querySelector('.gallery-container');
+//     var images = container.querySelectorAll('.gallery-images');
+//     var imageWidth = document.querySelector('.gallery-image').offsetWidth;
 
-const countryInput = document.getElementById("countryInput");
+//     var currentImage = 0;
+//     var totalImages = document.querySelectorAll('.gallery-image').length;
 
-countryInput.addEventListener("keyup", function (event) {
-    const inputText = event.target.value.trim();
+//     function scrollImages() {
+//         currentImage++;
+//         if (currentImage === totalImages) {
+//             currentImage = 0;
+//         }
+//         images.forEach(function(image) {
+//             image.style.transform = 'translateX(-' + (currentImage * imageWidth) + 'px)';
+//         });
+//     }
 
-    if (inputText.length === 1) {
-        const filteredCountries = countryNames.filter(function (country) {
-            return country.charAt(0).toLowerCase() === inputText.toLowerCase();
-        });
+//     setInterval(scrollImages, 3000);
+// });
 
-        if (filteredCountries.length > 0) {
-            console.log(filteredCountries);
-        }
-    }
-});*/
+// window.addEventListener('DOMContentLoaded', function () {
+//     var container = document.querySelector('.gallery-container');
+//     var images = container.querySelectorAll('.gallery-images');
+//     var imageWidth = container.querySelector('.gallery-image').offsetWidth;
+
+//     var currentImage = 0;
+//     var totalImages = container.querySelectorAll('.gallery-image').length;
+
+//     function scrollImages() {
+//       currentImage++;
+//       if (currentImage === totalImages) {
+//         currentImage = 0;
+//       }
+//       images.forEach(function (image) {
+//         image.style.transform = 'translateX(-' + (currentImage * imageWidth) + 'px)';
+//       });
+//     }
+
+//     setInterval(scrollImages, 3000);
+//   });
+
+
+// window.addEventListener('DOMContentLoaded', function () {
+//   var container = document.querySelector('.gallery-container');
+//   var images = container.querySelectorAll('.gallery-images');
+//   var imageWidth = container.querySelector('.gallery-image').offsetWidth;
+
+//   var currentImage = 0;
+//   var totalImages = container.querySelectorAll('.gallery-image').length;
+
+//   function scrollImages() {
+//     currentImage++;
+//     if (currentImage === totalImages) {
+//       currentImage = 0;
+//     }
+//     images.forEach(function (image, index) {
+//       var translateValue = (index - currentImage) * imageWidth;
+//       image.style.transform = 'translateX(' + translateValue + 'px)';
+//     });
+//   }
+
+//   setInterval(scrollImages, 3000);
+// });
+
+
+// Get all gallery image elements
+const galleryImages = document.querySelectorAll('.gallery-container > div');
+
+// Set the initial image index and interval duration
+let currentImageIndex = 0;
+const intervalDuration = 4000; // 4 seconds
+
+// Function to show the next image
+function showNextImage() {
+  // Hide the current image
+  galleryImages[currentImageIndex].style.display = 'none';
+
+  // Increment the index
+  currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+
+  // Show the next image
+  galleryImages[currentImageIndex].style.display = 'flex';
+}
+
+// Start the slideshow
+setInterval(showNextImage, intervalDuration);
+
+

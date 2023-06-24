@@ -1,43 +1,47 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
+
 /* hero section starts */
-.hero{
-    border: 3px solid blue;
+.hero {
+    /* border: 3px solid blue; */
     background: rgb(184, 184, 184);
 }
-.menu-bar{
-    border: 3px solid tomato;
-}
-.top-menu{
-    border: 3px solid yellow;
+
+.top-menu {
+    /* border: 3px solid yellow; */
     background: #fff;
     display: flex;
     position: fixed;
-    width: 98%;
-    margin: 0 auto;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
+    z-index: 6;
 }
-.logo-bar{
+
+.logo-bar {
     /* border: 3px solid green; */
     height: 50px;
     width: 170px;
 }
-.logo-bar img{
+
+.logo-bar img {
     width: 100%;
     height: 100%;
 }
-.menu-content{
+
+.menu-content {
     width: 70%;
 }
-.menu-content ul{
+
+.menu-content ul {
     /* border: 3px solid black; */
     display: flex;
     height: 50px;
@@ -45,17 +49,133 @@ html{
     justify-content: space-between;
     align-items: center;
 }
-.menu-content li{
+
+.menu-content li {
     list-style: none;
     font-size: 18px;
     transition: all 0.2s ease;
+    cursor: pointer;
 }
-.menu-content li:hover{
+
+.menu-content li:hover {
     border-bottom: 3px solid orange;
 }
-input{
-    outline: none;
-    border: 2px solid #000;
-    height: 40px;
+
+.gallery-container {
+    border: 3px solid yellow;
+    height: 98vh;
+    overflow: hidden;
 }
+
+.gallery-images {
+    background: url(./images/23324.jpg);
+}
+
+.gallery-images2 {
+    background: url(./images/african-business-male-people-shaking-hands.jpg);
+}
+
+.gallery-images3 {
+    background: url(./images/landmarks-modern-city.jpg);
+}
+
+.gallery-images4 {
+    background: url(./images/abstract-computer-chip-metal-binary-code-security-generated-by-ai.jpg);
+}
+
+.gallery-images5 {
+    background: url(./images/SL-110820-37810-10.jpg);
+}
+
+.gallery-images,
+.gallery-images2,
+.gallery-images3,
+.gallery-images4,
+.gallery-images5 {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.gallery-images5 .image-text {
+    background-color: #ffffff05;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(25px);
+    border-radius: 15px;
+    padding: 50px;
+}
+
+.image-text {
+    /* border: 3px solid green; */
+    margin-left: 12%;
+}
+
+.image-text h1 {
+    font-size: 55px;
+    line-height: 40px;
+    margin-bottom: 18px;
+    color: #fff;
+}
+
+.image-text h1 span {
+    font-size: 25px;
+}
+
+.image-text p {
+    color: #fff;
+    margin-bottom: 35px;
+    line-height: 25px;
+}
+
+.gallery-images2 .style {
+    color: orange;
+    font-size: 55px;
+}
+
+.gallery-images3 .style {
+    color: purple;
+    font-size: 55px;
+}
+
+.access {
+    position: relative;
+    font-size: 1.2em;
+    padding: 0.7em 1.4em;
+    background-color: orange;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.5em;
+    color: #DEDEDE;
+    box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
+}
+.access::before{
+    position: absolute;
+    content: "";
+    height: 0;
+    width: 0;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, rgb(94, 94, 94) 0%, rgba(33,33,33,1) 50%, rgb(172, 112, 2) 50%, rgb(197, 128, 0) 60%);
+    border-radius: 0 0 0.5em 0;
+    box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+.access:hover::before{
+    height: 1.6em;
+    width: 1.6em;
+}
+.access:active{
+    box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
+    transform: translate(0.1em, 0.1em);
+}
+.gallery-images3 .access{
+    color: rgb(255, 179, 38);
+    background: purple;
+}
+
+/* .news{
+    border: 3px solid yellow;
+} */
 /* hero section ends */
