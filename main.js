@@ -105,4 +105,3 @@ function showNextImage() {
 // Start the slideshow
 setInterval(showNextImage, intervalDuration);
 
-

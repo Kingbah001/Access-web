@@ -62,7 +62,7 @@ html {
 }
 
 .gallery-container {
-    border: 3px solid yellow;
+    /* border: 3px solid yellow; */
     height: 98vh;
     overflow: hidden;
 }
@@ -141,6 +141,7 @@ html {
 
 .access {
     position: relative;
+    cursor: pointer;
     font-size: 1.2em;
     padding: 0.7em 1.4em;
     background-color: orange;
@@ -170,12 +171,69 @@ html {
     box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
     transform: translate(0.1em, 0.1em);
 }
-.gallery-images3 .access{
-    color: rgb(255, 179, 38);
-    background: purple;
+.news-container{
+    /* border: 3px solid green; */
+    padding: 15px 0;
+    margin: 20px 0;
+    align-items: center;
+    display: flex;
+    background: #c5c5c5;
 }
-
-/* .news{
+.news-container h1{
+    padding: 15px 30px 15px 100px;
+    font-size: 20px;
+    border-right: 5px solid orange;
+    white-space: nowrap;
+    font-style: italic;
+}
+.slide{
+    overflow: hidden;
+    padding: 15px 0;
+    background: #fff;
+    white-space: nowrap;
+    cursor: default;
+    /* display: flex; */
+}
+.slide:hover .news-list{
+    animation-play-state: paused;
+}
+.news-list {
+    display: flex;
+    animation: 15s slide infinite linear;
+}
+.news-list li{
+    display: flex;
+    margin: 0 10px;
+}
+@keyframes slide{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+.online-access{
     border: 3px solid yellow;
-} */
+    margin-top: 50px;
+}
+.online-access-heading{
+    border: 3px solid tomato;
+    text-align: center;
+    margin-bottom: 80px;
+    padding: 20px 0;
+}
+.online-access-heading h1{
+    font-weight: 5;
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+.online-access-heading h1 span{
+    font-weight: 550 !important;
+}
+.online-access-heading p{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+}
 /* hero section ends */
