@@ -9,6 +9,104 @@ html {
     scroll-behavior: smooth;
 }
 
+/* mobile view */
+
+.nav-mobile {
+    /* border: 3px solid yellow; */
+    background: #234567;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px 0 0;
+    position: fixed;
+    width: 100%;
+    z-index: 6;
+}
+
+.hamburger {
+    /* border: 3px solid yellow; */
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 6;
+}
+.logo-bar{
+    background: whitesmoke;
+    padding: 0 10px;
+}
+
+.bar {
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    position: relative;
+}
+
+.bar::before {
+    content: "";
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    transform: translateY(-10px);
+}
+
+.bar::after {
+    content: "";
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    transform: translateY(10px);
+}
+
+.showburger .bar {
+    background: transparent;
+}
+
+.showburger .bar::before {
+    transform: translateY(0) rotate(-45deg);
+    background: #240046;
+}
+
+.showburger .bar::after {
+    transform: translateY(0) rotate(45deg);
+    background: #240046;
+}
+
+.mobile-link-holder {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    transform: translateX(300%);
+    align-items: center;
+    background: rgb(228, 114, 7);
+    transition: all 1.5s ease;
+}
+
+.mobile-link-holder ul {
+    list-style: none;
+}
+
+.mobile-link-holder li {
+    text-decoration: none;
+    color: #eee;
+    display: block;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 23px 0 23px 20px;
+    /* transition: all 0.8s ease; */
+}
+
+.show-mobile-link-holder {
+    transform: translateX(0);
+}
+/* mobile view */
+
 /* hero section starts */
 .hero {
     /* border: 3px solid blue; */
@@ -18,53 +116,68 @@ html {
     position: relative;
 }
 
-.top-menu {
+.menu-bar {
     /* border: 3px solid yellow; */
-    background: #fff;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(212, 211, 211);
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    top: 0;
+    max-width: 1500px;
     position: fixed;
     width: 100%;
-    align-items: center;
-    justify-content: space-between;
     z-index: 6;
+    /* padding: 10px; */
 }
 
-.logo-bar {
-    /* border: 3px solid green; */
-    background: #c5c5c5;
-    padding: 10px;
-    height: 50px;
-    width: 170px;
+.logo {
+    /* border: 3px solid black; */
+    height: 60px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.logo-bar img {
-    width: 100%;
+.logo img {
+    object-fit: contain;
     height: 100%;
+    width: 100%;
+}
+
+.right-menubar {
+    /* border: 3px solid navy; */
+    display: flex;
+    align-items: center;
 }
 
 .menu-content {
-    width: 70%;
-}
-
-.menu-content ul {
     /* border: 3px solid black; */
     display: flex;
-    height: 50px;
-    width: 100%;
-    justify-content: space-between;
     align-items: center;
 }
 
-.menu-content li {
+.menu-content ul {
+    display: flex;
     list-style: none;
-    font-size: 18px;
-    transition: all 0.2s ease;
+}
+
+.menu-content li {
     cursor: pointer;
+    margin: 0 10px;
+    padding: 10px;
+    color: rgb(92, 92, 92);
+    font-size: 18px;
+    transition: all 0.5s ease;
 }
 
 .menu-content li:hover {
-    border-bottom: 3px solid orange;
+    color: rgb(228, 114, 7);
 }
+
 
 .gallery-container {
     /* border: 3px solid yellow; */
@@ -143,13 +256,18 @@ html {
     font-size: 55px;
     color: orange;
 }
+.gallery-images3 .image-text{
+    padding: 40px;
+    border-radius: 15px;
+    background: rgba(105, 105, 105, 0.3);
+}
 
 .gallery-images3 h1 {
-    color: black;
+    color: #fff;
 }
 
 .gallery-images3 p {
-    color: black;
+    color: #fff;
 }
 
 .access {
@@ -442,13 +560,18 @@ html {
 }
 
 .tenor-button {
-    border: 2px solid black;
-    padding: 10px;
+    border: 1px solid black;
+    /* padding: 10px; */
     background: transparent;
     margin-top: 20px;
-    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px !important;
+    font-weight: lighter !important;
     height: 50px;
-    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
 }
 
 .tenor-button:hover {
@@ -487,14 +610,18 @@ html {
 }
 
 .swiper {
+    /* border: 3px solid tomato; */
     width: 90%;
     margin: 0 auto 50px auto;
     padding: 50px 50px !important;
 }
 
 .swiper-slide {
+    /* border: 3px solid yellow; */
     background-position: center;
     background-size: cover;
+    position: relative;
+    display: inline-block;
     width: 350px !important;
     height: 300px !important;
 }
@@ -504,7 +631,47 @@ html {
     width: 100%;
     height: 100%;
 }
-
+.text-container {
+    position: absolute;
+    bottom: 20%;
+    left: 18px;
+    width: 90%;
+    text-align: center;
+    background-color: rgb(255, 255, 255, 0.6);
+    padding: 15px;
+    transition: bottom 0.8s ease;
+    opacity: 0;
+  }
+  .text-container p{
+    color: rgb(93, 150, 3);
+    font-size: 18px;
+    margin-bottom: 25px;
+    font-weight: bold;
+  }
+  .text-container span{
+    line-height: 22px;
+    font-size: 14px;
+  }
+  .text-container-button{
+    padding: 15px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 150px;
+    font-size: 18px;
+    border: 1px solid black;
+    transition: all 0.4s ease-in-out;
+  }
+  .text-container-button:hover{
+    background: #000;
+    color: #fff;
+  }
+  .swiper-slide:hover .text-container {
+    bottom: 0;
+    opacity: 1;
+  }  
 .closa {
     /* border: 3px solid tomato; */
     width: 90%;
@@ -608,6 +775,8 @@ html {
     justify-content: space-between;
     margin-top: 30px;
     height: 400px;
+    gap: 55px;
+    flex-wrap: wrap;
 }
 
 .explore-card1 {
@@ -626,10 +795,12 @@ html {
 .explore-card2,
 .explore-card3 {
     /* border: 3px solid black; */
-    width: 30%;
+    width: 32%;
     background-size: cover;
     background-position: center;
     height: 100%;
+    overflow: hidden;
+    min-width: 350px;
 }
 .card-content{
     position: absolute;
@@ -637,6 +808,7 @@ html {
     display: flex;
     clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
     color: #fff;
+    /* width: 40%; */
     background: rgb(1, 46, 131);
 }
 .line{
@@ -654,7 +826,7 @@ html {
     line-height: 25px;
     margin: 15px 0;
 }
-.card-content button{
+.card-writeup-button{
     display: inline-block;
     width: 150px;
     height: 50px;
@@ -666,8 +838,8 @@ html {
     z-index: 1;
     cursor: pointer;
 }
-button::before,
-button::after{
+.card-writeup-button::before,
+.card-writeup-button::after{
     content: '';
     position: absolute;
     top: 0;
@@ -678,24 +850,24 @@ button::after{
     overflow: hidden;
     z-index: -1;
 }
-button::before{
+.card-writeup-button::before{
     left: -10px;
     background: #240046;
 }
-button::after{
+.card-writeup-button::after{
     right: -10px;
     background: rgb(228, 114, 7);
 }
-button:hover::before,
-button:hover::after{
+.card-writeup-button:hover::before,
+.card-writeup-button:hover::after{
     width: 58%;
 }
-button:hover span{
+.card-writeup-button:hover span{
     color: #fff;
     transition: 0.3s;
     border: none;
 }
-button span{
+.card-writeup-button span{
     color: #03045e;
     font-size: 18px;
     transition: all 0.3s ease-in;
@@ -786,5 +958,35 @@ button span{
     padding: 10px;
     margin-left: 8px;
     font-size: 25px;
+}
+#scrollToTop{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(228, 114, 7);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    animation: blink 1.5s infinite;
+}
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#scrollToTop:hover{
+    background-color: rebeccapurple;
 }
 /* Footer section ends */

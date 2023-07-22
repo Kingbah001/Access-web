@@ -1,0 +1,24 @@
+@media screen and (max-width:1150px){
+    .menu-bar{
+        display: none;
+    }
+    .nav-mobile{
+        display: flex;
+    }
+    .hero{
+        height: 100vh;
+        clip-path: none;
+    }
+    .scrollToTop{
+        display: none;
+    }
+    .card-container{
+        justify-content: center;
+    }
+    .news-container{
+        margin: 0;
+    }
+    .online-access-heading{
+        justify-content: center;
+    }
+}
