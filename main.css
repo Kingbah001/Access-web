@@ -108,7 +108,7 @@ html {
 /* mobile view */
 
 /* hero section starts */
-.hero {
+.heheader-sectionro {
     /* border: 3px solid blue; */
     background: #DEDEDE;
     clip-path: polygon(0 0, 100% 0%, 100% 84%, 0% 100%);
@@ -223,6 +223,7 @@ html {
     -webkit-backdrop-filter: blur(25px);
     border-radius: 15px;
     padding: 50px;
+    width: 100%;
 }
 
 .image-text {
@@ -358,20 +359,20 @@ html {
 
 .online-access {
     /* border: 3px solid yellow; */
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .online-access-heading {
     /* border: 3px solid tomato; */
     text-align: center;
-    margin-bottom: 80px;
-    padding: 20px 0;
+    margin-bottom: 40px;
+    padding: 0px 0;
 }
 
 .online-access-heading h1 {
     font-weight: 5;
     font-size: 40px;
-    margin-bottom: 25px;
+    margin-bottom: 18px;
 }
 
 .online-access-heading h1 span {
@@ -380,7 +381,7 @@ html {
 
 .online-access-heading p {
     font-weight: 600;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 30px;
 }
 
@@ -419,7 +420,7 @@ html {
     display: flex;
     width: 80%;
     position: absolute;
-    bottom: -1000px;
+    bottom: -930px;
     left: 80px;
     background: rgb(236, 126, 22);
     color: #fff;
@@ -518,7 +519,7 @@ html {
 .outer-loan {
     /* border: 3px solid yellow; */
     position: absolute;
-    bottom: -985px;
+    bottom: -915px;
     right: 80px;
     box-shadow: 18px 20px 4px 16px rgba(196, 191, 191, 0.4);
 }
@@ -529,6 +530,15 @@ html {
     flex-direction: column;
     text-align: center;
     padding: 60px;
+    clip-path: polygon(26% 0, 100% 0, 100% 100%, 0 100%);
+}
+.loan2 {
+    color: black;
+    background: #fff;
+    flex-direction: column;
+    text-align: center;
+    padding: 60px;
+    display: none;
     clip-path: polygon(26% 0, 100% 0, 100% 100%, 0 100%);
 }
 
@@ -585,7 +595,7 @@ html {
 /* Acess section starts */
 
 .accesses {
-    margin-top: 120px;
+    margin-top: 550px;
 }
 
 .top-accesses {
@@ -615,7 +625,6 @@ html {
     margin: 0 auto 50px auto;
     padding: 50px 50px !important;
 }
-
 .swiper-slide {
     /* border: 3px solid yellow; */
     background-position: center;
@@ -775,7 +784,6 @@ html {
     justify-content: space-between;
     margin-top: 30px;
     height: 400px;
-    gap: 55px;
     flex-wrap: wrap;
 }
 

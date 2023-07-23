@@ -1,24 +1,120 @@
 @media screen and (max-width:1150px){
+    body{
+        background: #DEDEDE;
+    }
     .menu-bar{
         display: none;
     }
     .nav-mobile{
         display: flex;
     }
-    .hero{
+    .header-section{
         height: 100vh;
         clip-path: none;
     }
-    .scrollToTop{
-        display: none;
+    .gallery-container{
+        background-position: center;
     }
-    .card-container{
-        justify-content: center;
+    .gallery-images5 .image-text h1{
+        line-height: 50px;
     }
-    .news-container{
-        margin: 0;
+    .online-access{
+        /* border: 3px solid gold; */
+        width: 90%;
+        margin: 80px auto 0 auto;
     }
     .online-access-heading{
+        display: flex;
+        flex-direction: column;
         justify-content: center;
+    }
+    .payday{
+        width: 80%;
+        height: 60%;
+        margin-bottom: 30px;
+        position: relative;
+        top: 40px;
+        left: 120px;
+        display: flex;
+        flex-direction: column;
+    }
+    .lefdiv-payday{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-right: none;
+        border-bottom: 1px solid white;
+    }
+    .lefdiv-payday h2{
+        /* border: 3px solid green; */
+        padding: 10px;
+        text-align: center;
+    }
+    .rightdiv-payday{
+        display: flex;
+        width: 100%;
+        margin-bottom: 80px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .outer-loan{
+        display: none;
+    }
+    .loan2{
+        display: flex;
+        width: 45%;
+        left: 300px;
+        bottom: -1565px;
+        position: absolute;
+        clip-path: polygon(0 0, 100% 19%, 100% 100%, 0% 100%);
+    }
+    .loan-content{
+        margin-top: 50px;
+    }
+    .explore-bottom{
+        font-size: 13px !important;
+    }
+    .accesses{
+        margin-top: 400px;
+    }
+    .the-bottom{
+        font-size: 15px;
+    }
+    .card-container{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .card-content{
+        position: relative;
+        top: 170px;
+        margin-bottom: 30px;
+    }
+    .equator{
+        display: none;
+    }
+    .footer{
+        margin-top: 500px;
+    }
+    .footer-content{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 35px;
+        justify-content: center;
+    }
+    .content-down{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    @media screen and (max-width:827.5px){
+        .footer{
+            margin-top: 900px;
+        }
     }
 }
