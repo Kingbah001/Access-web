@@ -17,7 +17,7 @@ html {
     display: none;
     justify-content: space-between;
     align-items: center;
-    padding: 0 5px 0 0;
+    padding: 0 15px 0 0;
     position: fixed;
     width: 100%;
     z-index: 6;
@@ -25,8 +25,8 @@ html {
 
 .hamburger {
     /* border: 3px solid yellow; */
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
